@@ -23,80 +23,40 @@ Response:
     "token": "8|LfBrIBYt1PdUMnqVgmA4guvvDWZ3LGiU3oFgcXQP"
 }
 
-2. Get brand list:
-Url: http://127.0.0.1:8000/api/getBrandDetails
+2. Get brand list: list all brands which are not deleted
+Url: http://127.0.0.1:8000/api/getBrandList
 Method: GET
 Header: Authorization=> Bearer 3|9ZszSL0KcuXyfJsJZ12R7PR7nkaaNlbgZycRXYOw
 Example:
 Response:
 [
     {
-        "brand-name": "Ford",
-        "brand-image": "http://127.0.0.1:8000/storage/brands/1664121928-brand.jpg",
-        "models": [
-            {
-                "model_name": "Figo",
-                "image": "http://127.0.0.1:8000/storage/models/1664122797-model.jpg",
-                "manufacturing_year": "2012"
-            },
-            {
-                "model_name": "Ecosport",
-                "image": "http://127.0.0.1:8000/storage/models/1664122894-model.jpg",
-                "manufacturing_year": "2010"
-            }
-        ]
+        "id": 1,
+        "name": "Ford",
+        "logo": "1664121928-brand.jpg",
+        "is_active": 1
     },
     {
-        "brand-name": "Toyota",
-        "brand-image": "http://127.0.0.1:8000/storage/brands/1664121950-brand.png",
-        "models": [
-            {
-                "model_name": "Platinum Etios",
-                "image": "http://127.0.0.1:8000/storage/models/1664169851-model.jpg",
-                "manufacturing_year": "2010"
-            },
-            {
-                "model_name": "Sedan",
-                "image": "http://127.0.0.1:8000/storage/models/1664122745-model.jpg",
-                "manufacturing_year": "2014"
-            }
-        ]
+        "id": 2,
+        "name": "Toyota",
+        "logo": "1664121950-brand.png",
+        "is_active": 1
     },
     {
-        "brand-name": "Tata",
-        "brand-image": "http://127.0.0.1:8000/storage/brands/1664121962-brand.png",
-        "models": [
-            {
-                "model_name": "Nexon",
-                "image": "http://127.0.0.1:8000/storage/models/1664122989-model.jpg",
-                "manufacturing_year": "2017"
-            },
-            {
-                "model_name": "Tiago",
-                "image": "http://127.0.0.1:8000/storage/models/1664123012-model.jpg",
-                "manufacturing_year": "2019"
-            }
-        ]
+        "id": 3,
+        "name": "Tata",
+        "logo": "1664121962-brand.png",
+        "is_active": 1
     },
     {
-        "brand-name": "Honda",
-        "brand-image": "http://127.0.0.1:8000/storage/brands/1664177202-brand.png",
-        "models": [
-            {
-                "model_name": "Jazz",
-                "image": "http://127.0.0.1:8000/storage/models/1664177236-model.jpg",
-                "manufacturing_year": "2020"
-            },
-            {
-                "model_name": "Honda City",
-                "image": "http://127.0.0.1:8000/storage/models/1664177266-model.jpg",
-                "manufacturing_year": "2013"
-            }
-        ]
+        "id": 4,
+        "name": "Honda",
+        "logo": "1664177202-brand.png",
+        "is_active": 1
     }
 ]
 
-3. Get brands with there model details
+3. Get all brand details with list of all models created under that brand
 Url: http://127.0.0.1:8000/api/getBrandDetails
 Method: GET
 Header: Authorization=> Bearer 3|9ZszSL0KcuXyfJsJZ12R7PR7nkaaNlbgZycRXYOw
