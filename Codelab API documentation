@@ -1,0 +1,183 @@
+Codelab API documentation
+
+1.To get user token for user authentication for APIs:
+Url: http://127.0.0.1:8000/api/getToken
+Method: POST
+Request:
+{
+	"email" : "Jyoti@gmail.com",
+	"password" : 12345
+}
+Response:
+{
+    "user": {
+        "id": 1,
+        "name": "Jyoti",
+        "email": "Jyoti@gmail.com",
+        "email_verified_at": null,
+        "password": "$2y$10$Ee9UKy4G/77RcmOsrVe1YuGoZr00VT8R9YjnINxLwscW6owqwFL2u",
+        "remember_token": null,
+        "created_at": null,
+        "updated_at": null
+    },
+    "token": "8|LfBrIBYt1PdUMnqVgmA4guvvDWZ3LGiU3oFgcXQP"
+}
+
+2. Get brand list:
+Url: http://127.0.0.1:8000/api/getBrandDetails
+Method: GET
+Header: Authorization=> Bearer 3|9ZszSL0KcuXyfJsJZ12R7PR7nkaaNlbgZycRXYOw
+Example:
+Response:
+[
+    {
+        "brand-name": "Ford",
+        "brand-image": "http://127.0.0.1:8000/storage/brands/1664121928-brand.jpg",
+        "models": [
+            {
+                "model_name": "Figo",
+                "image": "http://127.0.0.1:8000/storage/models/1664122797-model.jpg",
+                "manufacturing_year": "2012"
+            },
+            {
+                "model_name": "Ecosport",
+                "image": "http://127.0.0.1:8000/storage/models/1664122894-model.jpg",
+                "manufacturing_year": "2010"
+            }
+        ]
+    },
+    {
+        "brand-name": "Toyota",
+        "brand-image": "http://127.0.0.1:8000/storage/brands/1664121950-brand.png",
+        "models": [
+            {
+                "model_name": "Platinum Etios",
+                "image": "http://127.0.0.1:8000/storage/models/1664169851-model.jpg",
+                "manufacturing_year": "2010"
+            },
+            {
+                "model_name": "Sedan",
+                "image": "http://127.0.0.1:8000/storage/models/1664122745-model.jpg",
+                "manufacturing_year": "2014"
+            }
+        ]
+    },
+    {
+        "brand-name": "Tata",
+        "brand-image": "http://127.0.0.1:8000/storage/brands/1664121962-brand.png",
+        "models": [
+            {
+                "model_name": "Nexon",
+                "image": "http://127.0.0.1:8000/storage/models/1664122989-model.jpg",
+                "manufacturing_year": "2017"
+            },
+            {
+                "model_name": "Tiago",
+                "image": "http://127.0.0.1:8000/storage/models/1664123012-model.jpg",
+                "manufacturing_year": "2019"
+            }
+        ]
+    },
+    {
+        "brand-name": "Honda",
+        "brand-image": "http://127.0.0.1:8000/storage/brands/1664177202-brand.png",
+        "models": [
+            {
+                "model_name": "Jazz",
+                "image": "http://127.0.0.1:8000/storage/models/1664177236-model.jpg",
+                "manufacturing_year": "2020"
+            },
+            {
+                "model_name": "Honda City",
+                "image": "http://127.0.0.1:8000/storage/models/1664177266-model.jpg",
+                "manufacturing_year": "2013"
+            }
+        ]
+    }
+]
+
+3. Get brands with there model details
+Url: http://127.0.0.1:8000/api/getBrandDetails
+Method: GET
+Header: Authorization=> Bearer 3|9ZszSL0KcuXyfJsJZ12R7PR7nkaaNlbgZycRXYOw
+Response:
+[
+    {
+        "brand-name": "Ford",
+        "brand-image": "http://127.0.0.1:8000/storage/brands/1664121928-brand.jpg",
+        "models": [
+            {
+                "model_name": "Figo",
+                "image": "http://127.0.0.1:8000/storage/models/1664122797-model.jpg",
+                "manufacturing_year": "2012"
+            },
+            {
+                "model_name": "Ecosport",
+                "image": "http://127.0.0.1:8000/storage/models/1664122894-model.jpg",
+                "manufacturing_year": "2010"
+            }
+        ]
+    },
+    {
+        "brand-name": "Toyota",
+        "brand-image": "http://127.0.0.1:8000/storage/brands/1664121950-brand.png",
+        "models": [
+            {
+                "model_name": "Platinum Etios",
+                "image": "http://127.0.0.1:8000/storage/models/1664169851-model.jpg",
+                "manufacturing_year": "2010"
+            },
+            {
+                "model_name": "Sedan",
+                "image": "http://127.0.0.1:8000/storage/models/1664122745-model.jpg",
+                "manufacturing_year": "2014"
+            }
+        ]
+    },
+    {
+        "brand-name": "Tata",
+        "brand-image": "http://127.0.0.1:8000/storage/brands/1664121962-brand.png",
+        "models": [
+            {
+                "model_name": "Nexon",
+                "image": "http://127.0.0.1:8000/storage/models/1664122989-model.jpg",
+                "manufacturing_year": "2017"
+            },
+            {
+                "model_name": "Tiago",
+                "image": "http://127.0.0.1:8000/storage/models/1664123012-model.jpg",
+                "manufacturing_year": "2019"
+            }
+        ]
+    },
+    {
+        "brand-name": "Honda",
+        "brand-image": "http://127.0.0.1:8000/storage/brands/1664177202-brand.png",
+        "models": [
+            {
+                "model_name": "Jazz",
+                "image": "http://127.0.0.1:8000/storage/models/1664177236-model.jpg",
+                "manufacturing_year": "2020"
+            },
+            {
+                "model_name": "Honda City",
+                "image": "http://127.0.0.1:8000/storage/models/1664177266-model.jpg",
+                "manufacturing_year": "2013"
+            }
+        ]
+    }
+]
+
+4. Create new model:
+Url: http://127.0.0.1:8000/api/createNewModel
+Method: POST
+Header: Authorization=> Bearer 3|9ZszSL0KcuXyfJsJZ12R7PR7nkaaNlbgZycRXYOw
+Request:
+{
+	"brand_id": 4,
+	"model_name": 'Sedan',
+	"manufacturing_year": 2001
+}
+
+Response:
+Model Created Successfully!
